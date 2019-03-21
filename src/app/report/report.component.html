@@ -1,0 +1,18 @@
+<mat-toolbar class="header">
+  <span>Install Base</span>
+  <span class="example-fill-remaining-space"></span>
+  <span class="reportsdropdown">
+    <mat-form-field>
+      <mat-select placeholder="Report">
+        <mat-option *ngFor="let food of reportslist" [value]="food.id" (click)="showReport(food.id)">
+          {{food.reportName}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </span>
+  <span class="logout" (click)="logout()">Logout</span>
+</mat-toolbar>
+<div class="reportframe"> 
+    <div class="loading" *ngIf = "!load">Loading&#8230;</div> 
+  <div id="reportContainer" [hidden] = "!load"></div>
+</div>

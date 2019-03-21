@@ -1,0 +1,42 @@
+<mat-toolbar class="header">Install Base</mat-toolbar>
+<!-- <div class="login-page">
+<div class="form">
+        <span *ngIf="invalidcred" class="error">Please enter valid credentials</span>
+        <form  class="login-form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+              <mat-form-field class="example-full-width">
+                <input autocomplete="off" matInput placeholder="Username" formControlName="username">
+                <mat-error *ngIf="profileForm.controls.username.touched && profileForm.controls.username.hasError('required')">
+                    Username is required
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input autocomplete="off" matInput placeholder="Password" formControlName="password">
+                <mat-error *ngIf="profileForm.controls.password.touched && profileForm.controls.password.hasError('required')">
+                    Password is required
+                </mat-error>
+              </mat-form-field>
+            <button class="submit" mat-button [disabled]="!profileForm.valid">Submit</button>
+          </form>
+</div>
+</div> -->
+    
+
+     <div class="login-page">
+      <div class="form">
+        <form class="login-form" [formGroup]="profileForm">
+          <mat-form-field>
+          <input matInput type="text" placeholder="username" formControlName="username"/>
+          <mat-error *ngIf="profileForm.controls.username.touched && profileForm.controls.username.hasError('required')">
+            Username is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput type="password" placeholder="password" formControlName="password"/>
+          <mat-error *ngIf="profileForm.controls.password.touched && profileForm.controls.password.hasError('required')">
+              Password is required
+          </mat-error>
+        </mat-form-field>
+          <button [disabled]="!profileForm.valid" (click)="onSubmit()">login</button>
+        </form>
+      </div>
+    </div>

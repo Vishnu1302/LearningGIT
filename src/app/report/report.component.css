@@ -1,0 +1,21 @@
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  .logout{
+      cursor: pointer;
+  }
+  .reportsdropdown{
+     padding-right: 3vw;
+  }
+  #reportContainer{
+     height: 100%;
+     overflow: hidden;
+  }
+  .mat-toolbar{
+     height:84px !important;
+  }
+  .reportframe{
+     height:calc(100% - 84px);
+  }
